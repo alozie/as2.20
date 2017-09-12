@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flow_layout
+    - node.type.page
+  module:
+    - text
+id: node.page.field_flow_layout
+field_name: field_flow_layout
+entity_type: node
+bundle: page
+label: 'Flow Layout'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

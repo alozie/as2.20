@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_alt_text
+    - paragraphs.paragraphs_type.para_audio
+id: paragraph.para_audio.field_para_alt_text
+field_name: field_para_alt_text
+entity_type: paragraph
+bundle: para_audio
+label: 'Alt Text'
+description: 'Enter any alternate text for the audio track. This is needed for accessibility.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_audio_embed_link
+    - paragraphs.paragraphs_type.para_audio
+  module:
+    - soundcloudfield
+id: paragraph.para_audio.field_para_audio_embed_link
+field_name: field_para_audio_embed_link
+entity_type: paragraph
+bundle: para_audio
+label: 'Audio Embed Link'
+description: 'Enter the Embed code for the audio track'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: soundcloud

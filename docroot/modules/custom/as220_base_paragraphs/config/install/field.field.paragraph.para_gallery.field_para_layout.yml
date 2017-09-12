@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_layout
+    - paragraphs.paragraphs_type.para_gallery
+    - taxonomy.vocabulary.vocabulary_flow_layout
+  content:
+    - 'taxonomy_term:vocabulary_flow_layout:efbac945-9494-4f20-b500-f203f9831a9f'
+id: paragraph.para_gallery.field_para_layout
+field_name: field_para_layout
+entity_type: paragraph
+bundle: para_gallery
+label: 'Flow Layout'
+description: 'Select where this gallery should be displayed'
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: efbac945-9494-4f20-b500-f203f9831a9f
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      vocabulary_flow_layout: vocabulary_flow_layout
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

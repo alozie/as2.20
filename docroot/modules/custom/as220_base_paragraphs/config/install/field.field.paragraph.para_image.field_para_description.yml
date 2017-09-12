@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_description
+    - paragraphs.paragraphs_type.para_image
+  module:
+    - text
+id: paragraph.para_image.field_para_description
+field_name: field_para_description
+entity_type: paragraph
+bundle: para_image
+label: Description
+description: 'Enter any description for the image here.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

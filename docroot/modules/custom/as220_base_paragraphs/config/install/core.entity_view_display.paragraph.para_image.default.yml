@@ -1,0 +1,40 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_image.field_para_description
+    - field.field.paragraph.para_image.field_para_image_file
+    - field.field.paragraph.para_image.field_para_layout
+    - paragraphs.paragraphs_type.para_image
+  module:
+    - image
+    - text
+id: paragraph.para_image.default
+targetEntityType: paragraph
+bundle: para_image
+mode: default
+content:
+  field_para_description:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_para_image_file:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_para_layout:
+    weight: 0
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+hidden:
+  created: true
+  uid: true

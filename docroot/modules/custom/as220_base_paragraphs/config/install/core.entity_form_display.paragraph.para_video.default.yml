@@ -1,0 +1,55 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_video.field_para_alt_text
+    - field.field.paragraph.para_video.field_para_description
+    - field.field.paragraph.para_video.field_para_layout
+    - field.field.paragraph.para_video.field_para_title
+    - field.field.paragraph.para_video.field_para_video_embed_link
+    - paragraphs.paragraphs_type.para_video
+  module:
+    - text
+    - video_embed_field
+id: paragraph.para_video.default
+targetEntityType: paragraph
+bundle: para_video
+mode: default
+content:
+  field_para_alt_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_para_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_para_layout:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_para_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+  field_para_video_embed_link:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+hidden:
+  created: true
+  uid: true

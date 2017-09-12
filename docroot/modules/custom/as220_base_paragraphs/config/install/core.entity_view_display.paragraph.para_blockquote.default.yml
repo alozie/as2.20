@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_blockquote.field_para_attribution
+    - field.field.paragraph.para_blockquote.field_para_layout
+    - field.field.paragraph.para_blockquote.field_para_quote
+    - paragraphs.paragraphs_type.para_blockquote
+  module:
+    - text
+id: paragraph.para_blockquote.default
+targetEntityType: paragraph
+bundle: para_blockquote
+mode: default
+content:
+  field_para_attribution:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_para_layout:
+    weight: 2
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_para_quote:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true

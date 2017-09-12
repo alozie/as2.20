@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_para_image
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_para_image
+field_name: field_para_image
+entity_type: node
+bundle: page
+label: 'Flow Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings: {  }
+field_type: entity_reference_revisions

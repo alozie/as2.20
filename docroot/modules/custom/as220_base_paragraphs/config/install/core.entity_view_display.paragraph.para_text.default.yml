@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_text.field_para_layout
+    - field.field.paragraph.para_text.field_para_text
+    - paragraphs.paragraphs_type.para_text
+  module:
+    - text
+id: paragraph.para_text.default
+targetEntityType: paragraph
+bundle: para_text
+mode: default
+content:
+  field_para_layout:
+    weight: 1
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_para_text:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true
