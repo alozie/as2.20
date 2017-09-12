@@ -1,0 +1,566 @@
+/* 
+Forms
+===========================================================
+*/
+
+
+/* Form
+-----------------------------------------------------------
+
+    <form>...</form>
+*/
+
+form {
+    box-sizing: border-box;
+}
+
+
+/* Fieldset
+-----------------------------------------------------------
+
+    <fieldset>...</fieldset>
+*/
+
+fieldset {
+    box-sizing: border-box;
+    margin-bottom: $col-gutter;
+}
+
+fieldset.compact {
+    border: 0;
+    padding: 0;
+}
+
+
+/* Legend
+-----------------------------------------------------------
+
+    <legend>...</legend>
+*/
+
+legend {
+    box-sizing: border-box;
+}
+
+
+/* Label
+-----------------------------------------------------------
+
+    <label>...</label>
+*/
+
+label {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    font-size: 0.875em;
+    font-weight: 500;
+    line-height: 1.75em;
+    color: map-get($colors, grey4);
+}
+
+
+/* Inputs
+-----------------------------------------------------------
+*/
+
+input[type="text"], 
+input[type="password"], 
+input[type="url"], 
+input[type="email"], 
+input[type="search"], 
+input[type="number"], 
+input[type="range"], 
+input[type="date"], 
+input[type="month"], 
+input[type="week"], 
+input[type^="datetime"], 
+input[type="file"], 
+textarea {
+    display: block;
+    outline: 0;
+    border: 1px solid map-get($colors, grey4);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-sizing: border-box;
+    padding: 0.75em;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1em;
+}
+
+button,
+html input[type="button"], 
+input[type="reset"], 
+input[type="submit"] {
+    display: block;
+}
+
+
+/* Placeholder
+-----------------------------------------------------------
+
+    <input type="text" name="lorem" placeholder="Lorem ipsum ...">
+*/
+
+// Redundant placehholder declarations are required for each browser because they exit as soon as they finds a property they don't understand.
+::-webkit-input-placeholder { 
+    font-family: $font-sans;
+    color: map-get($colors, grey4); 
+}
+:-moz-placeholder {
+    font-family: $font-sans;
+    color: map-get($colors, grey4);
+}
+::-moz-placeholder { 
+    font-family: $font-sans;
+    color: map-get($colors, grey4); 
+}
+:-ms-input-placeholder { 
+    font-family: $font-sans;
+    color: map-get($colors, grey4); 
+}
+input-placeholder {
+    font-family: $font-sans;
+    color: map-get($colors, grey4);
+}
+
+
+/* Text Field
+-----------------------------------------------------------
+
+    <input type="text" value="Lorem ipsum ...">
+*/
+
+input[type="text"] {
+}
+
+
+/* Password
+-----------------------------------------------------------
+
+    <input type="password" value="Loremipsum">
+*/
+
+input[type="password"] {
+}
+
+
+/* Web Address
+-----------------------------------------------------------
+
+    <input type="url" value="www.loremipsum.com">
+*/
+
+input[type="url"] {
+}
+
+
+/* Email Address 
+-----------------------------------------------------------
+
+    <input type="email" value="lorem@ipsum.com">
+*/
+
+input[type="email"] {
+}
+
+
+/* Search
+-----------------------------------------------------------
+
+    <input type="search" value="lorem">
+*/
+
+input[type="search"] {
+}
+
+
+/* Number
+-----------------------------------------------------------
+
+    <input type="number" value="123">
+*/
+
+input[type="number"] {
+}
+
+
+/* Textarea
+-----------------------------------------------------------
+
+    <textarea>Lorem ipsum ...</textarea>
+*/
+
+textarea {
+}
+
+
+/*  Form Message
+-----------------------------------------------------------
+Validation message should be added to `.form-msg` via Javascript
+    
+    <input type="text" class="is-error">
+    <div class="form-msg">There is an error...</div>
+*/
+
+.form-msg {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-bottom: 0.3em;
+    font-size: 0.875em;
+    line-height: 1.75em;
+}
+
+
+/* Form Error
+-----------------------------------------------------------
+Error message should be added to `.form-msg` via Javascript
+    
+    <input type="text" class="is-error">
+    <div class="form-msg">There is an error...</div>
+*/
+
+input.is-error {
+    border: 1px solid map-get($colors, red);
+}
+
+.is-error + .form-msg,
+.is-error > .form-msg {
+    color: map-get($colors, red); 
+}
+
+
+/* Inline Form Elements
+-----------------------------------------------------------
+
+    <input type="text" class="inline" value="Foo">
+    <input type="text" class="inline" value="Bar">
+
+    <button class="btn inline">Foo</button>
+    <button class="btn btn-primary inline">Bar</button>
+*/
+
+input.inline,
+button.inline,
+.btn.inline,
+.switch.inline {
+    display: inline-block;
+    margin-right: .5em;
+    width: auto;
+}
+    
+
+/* Small Button
+-----------------------------------------------------------
+
+    <div class="btn btn-small">Foo</div>
+    <div class="btn btn-primary btn-small">Foo</div>
+*/
+
+.btn.btn-small {
+    padding: .6em 1em;
+    &.inline {
+        margin: -.5em 0 0 0;
+    }
+}
+    
+    
+/* Button
+-----------------------------------------------------------
+
+    <div class="btn">Foo</div>
+*/
+
+.btn {
+    margin: 1em 0;
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    border-radius: 0;
+    padding: .875em 1em;
+    text-align: center;
+    font-size: 1em;
+    line-height: 1em;
+    color: map-get($colors, black);
+    background: map-get($colors, grey5);
+    min-width: 2.125rem;
+    width: 100%;
+}
+
+a.btn {
+    color: map-get($colors, white);
+}    
+
+
+/* Primary Button
+-----------------------------------------------------------
+
+    <div class="btn btn-primary">Foo</div>
+*/
+
+.btn-primary {
+    color: map-get($colors, white);
+    background: map-get($colors, berry);
+    &.btn-outline {
+        border-color: map-get($colors, berry);
+        color: map-get($colors, berry);
+        background: none;
+    }
+}
+
+
+/* Primary Brand
+-----------------------------------------------------------
+
+    <div class="btn btn-brand">Foo</div>
+*/
+
+.btn-brand {
+    color: map-get($colors, black);
+    background: map-get($colors, yellow);
+    &.btn-outline {
+        border-color: map-get($colors, yellow);
+        color: map-get($colors, black);
+        background: none;
+    }
+}
+
+
+/* Outline Button
+-----------------------------------------------------------
+
+    <div class="btn btn-outline">Foo</div>
+    <div class="btn btn-primary btn-outline">Foo</div>
+*/
+
+.btn-outline {
+    border: 1px solid map-get($colors, grey4);
+    color: gray;
+    background: none;
+}
+
+.btn-outline {
+    color: map-get($colors, grey4);
+}
+
+.btn-primary.btn-outline {
+    color: map-get($colors, green);
+}
+
+
+/* Select Menu
+-----------------------------------------------------------
+
+    <div class="select">
+        <select>...</select>
+    </div>
+
+*/
+
+.select {
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    background: map-get($colors, white);
+    font-size: 1em;
+}
+
+.select select {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+        -ms-appearance: none;
+         -o-appearance: none;
+            appearance: none;
+    display: inline-block;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    border: 1px solid map-get($colors, berry);
+    border-radius: 0;
+    height: 2.143em;
+    padding: 0 1.75em 0 0.357em;
+    outline: none;
+    color: map-get($colors, berry);
+    background: transparent; 
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    option {
+        width: 100%;
+    }
+}
+
+.select::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 1.75em;
+    right: 1.625em;
+    font-size: 0.4em;
+    color: map-get($colors, berry);
+    @include triangle(bottom);
+    pointer-events: none;
+}
+
+// Target Internet Explorer 9 and Internet Explorer 10
+@media screen and (min-width: 0\0) {
+    .select select {
+        padding: 0 0.75em 0 0.375em;
+        padding: .5em;
+        border: 0;
+    }
+    .select::after {
+        font-size: 1.5em;
+        line-height: 1.4;
+        width: 1.5em;
+        height: 1.4em;
+        display: none;
+    }
+}
+
+
+/* Checkbox
+-----------------------------------------------------------
+No need for JS to set state. The form widget should do it.    
+    
+    </div>
+        <div class="checkbox">
+        <input type="checkbox" name="check" id="mycheckbox1" checked>
+        <label for="mycheckbox1">Foo</label>
+        <input type="checkbox" name="check" id="mycheckbox2">
+        <label for="mycheckbox2">Bar</label>
+    </div>
+
+For multiple inline checkboxes use:    
+
+    <div class="checkbox inline">
+        <input type="checkbox" name="checkb" id="mycheckbox1b" checked>
+        <label for="mycheckbox1b">Foo</label>
+        <input type="checkbox" name="checkb" id="mycheckbox2b">
+        <label for="mycheckbox2b">Bar</label>
+    </div>
+*/
+
+.checkbox {
+    line-height: 2em;
+    input[type=checkbox] {
+        display: none;
+    }
+    &.inline label {
+        margin-right: .5em;
+        display: inline-block;
+    }
+    &.stacked > label {
+        line-height: 1.4em;
+        white-space: normal;
+        padding-left: 2em;
+    }
+    &.stacked > label::before {
+        margin-left: -2em;
+    }
+    label {
+        display: block;
+    }
+    label::before {
+        margin-top: -.25em;
+        box-sizing: border-box;
+        border: 1px solid map-get($colors, grey4);
+        display: inline-block;
+        content: "✓";
+        margin-right: .5em;
+        width: 1.5em;
+        height: 1.5em;
+        text-align: center;
+        line-height: 1.5em;
+        color: #eee;
+        background: map-get($colors, white);
+        vertical-align: middle;
+        transition: all 150ms ease-in-out 0s; 
+    }
+    input[type=checkbox]:checked + label::before {
+        border-color: map-get($colors, berry);
+        color: white;
+        background: map-get($colors, berry);
+    }
+}
+
+
+/* Radio Buttons
+-----------------------------------------------------------
+No need for JS to set state. The form widget should do it.    
+    
+    <div class="radio">
+        <input type="radio" name="radio" id="mychcek1" checked>
+        <label for="mychcek1">Foo</label>
+        <input type="radio" name="radio" id="mychcek2">
+        <label for="mychcek2">Bar</label>
+        <input type="radio" name="radio" id="mychcek3">
+        <label for="mychcek3">Baz</label>
+    </div>
+    
+For multiple inline radio buttons use:    
+    
+    <div class="radio inline">
+        <input type="radio" name="radiob" id="mychcek1b" checked>
+        <label for="mychcek1b">Foo</label>
+        <input type="radio" name="radiob" id="mychcek2b">
+        <label for="mychcek2b">Bar</label>
+        <input type="radio" name="radiob" id="mychcek3b">
+        <label for="mychcek3b">Baz</label>
+    </div>
+*/
+
+.radio {
+    line-height: 2em;
+    input[type=radio] {
+        display: none;
+    }
+    &.inline label {
+        margin-right: .5em;
+        display: inline-block;
+    }
+    label {
+        display: block;
+    }
+    label::before {
+        margin-top: -.25em;
+        box-sizing: border-box;
+        border: 1px solid map-get($colors, grey4);
+        display: inline-block;
+        content: "";
+        border-radius: 50%;
+        margin-right: .5em;
+        width: 1.5em;
+        height: 1.5em;
+        background: map-get($colors, white);
+        vertical-align: middle;
+        transition: all 150ms ease-in-out 0s; 
+    }
+    input[type=radio]:checked + label::before {
+        border: .45em solid map-get($colors, berry);
+    }
+}
+
+.radio.radio-brand {
+    input[type=radio]:checked + label::before {
+        border: .45em solid map-get($colors, yellow);
+    }   
+}
+
+
+/* Search Form
+-----------------------------------------------------------
+*/
+
+@media (min-width: map-get($type-breakpoint, medium)) {
+    #search-form {
+        margin-top: 1.6em;    
+    }
+}
+

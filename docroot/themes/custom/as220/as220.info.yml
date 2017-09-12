@@ -1,0 +1,19 @@
+name: AS220
+type: theme
+description: 'AS220 responsive, mobile-first theme.'
+core: 8.x
+libraries:
+  - as220/global-css
+  - as220/global-js
+
+base theme: stable
+
+regions:
+  preheader: Pre-Header
+  header: Header
+  navbar: Navbar
+  precontent: Pre-Content
+  content: Content
+  postcontent: Post-Content
+  footer: Footer
+  postfooter: Post-Footer

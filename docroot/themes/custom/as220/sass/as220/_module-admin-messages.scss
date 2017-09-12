@@ -1,0 +1,41 @@
+/* Messages 
+===========================================================
+Drupal system messages
+
+    <div class="messages messages--error">
+        <div role="alert">
+            <h2 class="visually-hidden">Error message</h2>
+            ...
+        </div>
+    </div>
+
+    <div class="messages messages--status">
+        <h2 class="visually-hidden">Status message</h2>
+        ...
+    </div>
+*/
+
+.messages {
+    border-radius: 1.5em;
+    padding: 0.5em 1em;
+    margin-top: 0;
+    margin-bottom:0.75em;
+    background-color: map-get($colors, grey6);
+    a:hover {
+        background-color: transparent;
+    }
+} 
+
+.messages--status {
+    color: map-get($colors, white);
+    background-color: blue;
+}
+
+.messages--error {
+    color: map-get($colors, white);
+    background-color: red;
+}
+
+.messages--warning {
+    background-color: lime;
+}

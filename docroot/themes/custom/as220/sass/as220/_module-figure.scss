@@ -1,0 +1,39 @@
+/* Figure 
+===========================================================
+
+    <figure>
+        <img src="..." alt="..">            
+        <figcaption>
+            ...
+        </figcaption>
+    </figure>  
+*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    & > img, 
+    & > div > img {
+        display: block;
+        width: 100%;
+    }
+    figcaption {
+        margin-top: 0.625em;
+        color: map-get($colors, dark-gray);
+    }
+}    
+
+a:hover figure > *, 
+a:hover figure > * * {
+    color: map-get($colors, green);
+}
+
+a:hover figure > img {
+    outline: 1px solid map-get($colors, green);
+}

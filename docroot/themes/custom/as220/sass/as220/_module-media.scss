@@ -1,0 +1,54 @@
+/* Media Module
+===========================================================    
+From: /* URL: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+    
+    <div class="media">
+        <a href="..." class="media_img">
+            <img src="..." alt="...">
+        </a>
+        <div class="media_body">
+            ...
+        </div>
+    </div>
+*/
+
+.media {
+    display: table;
+    margin-bottom: 1em;
+    width: 100%;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-bottom: 1em;
+    }
+    a:hover * {
+//        color: map-get($colors, yellow-dark);
+    }
+}
+
+li .media {
+    margin-bottom: 0;
+}
+
+.media_image {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 1.25rem;
+    width: 6.125rem;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: 11rem;
+    }
+    & > img{
+        width: 100%;
+        height: auto;
+        display:block;
+    }
+}
+
+a:hover .media_image img {
+//    outline: 1px solid map-get($colors, yellow-dark);
+}
+
+.media_body {
+    display: table-cell;
+    vertical-align: top;
+}  
+

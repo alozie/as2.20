@@ -1,0 +1,132 @@
+/* Utilities
+===========================================================
+*/
+
+/* Noselect
+-----------------------------------------------------------
+*/
+
+.noselect  {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+/* CSS Triangle
+-----------------------------------------------------------
+*/
+
+@mixin triangle ($direction: right) {
+    $perpendicular-borders: 1em solid transparent;
+    $opposite-border: 0;
+    $direction-border: 1.72em solid currentColor;
+    @if $direction == top {
+        border-top: $opposite-border;
+        border-right: $perpendicular-borders;
+        border-bottom: $direction-border;
+        border-left: $perpendicular-borders;
+    } @else if $direction == right {
+        border-top: $perpendicular-borders;
+        border-right: $opposite-border;
+        border-bottom: $perpendicular-borders;
+        border-left: $direction-border;
+    } @else if $direction == bottom {
+        border-top: $direction-border;
+        border-right: $perpendicular-borders;
+        border-bottom: $opposite-border;
+        border-left: $perpendicular-borders;
+    } @else if $direction == left {
+        border-top: $perpendicular-borders;
+        border-right: $direction-border;
+        border-bottom: $perpendicular-borders;
+        border-left: $opposite-border;
+    }
+}
+
+
+/* Color Classes
+-----------------------------------------------------------
+*/
+
+*.yellow      { color: map-get($colors, yellow); }
+*.yellow-dark { color: map-get($colors, yellow-dark); }
+*.berry       { color: map-get($colors, berry); }
+*.white       { color: map-get($colors, white); }
+*.black       { color: map-get($colors, black); }
+*.grey1       { color: map-get($colors, grey1); }
+*.grey2       { color: map-get($colors, grey2); }
+*.grey3       { color: map-get($colors, grey3); }
+*.grey4       { color: map-get($colors, grey4); }
+*.grey5       { color: map-get($colors, grey5); }
+*.grey6       { color: map-get($colors, grey6); }
+
+
+/* Background Color Classes
+-----------------------------------------------------------
+*/
+
+.inverse-background {
+    color: map-get($colors, white);
+    background-color: map-get($colors, black);
+}
+
+.grey-background  {
+    background-color: map-get($colors, grey4);
+}
+
+.yellow-background {
+    background-color: map-get($colors, yellow);
+}
+
+.berry-background  {
+    color: map-get($colors, white);
+    background-color: map-get($colors, berry);
+}
+
+
+/* De-emphasis
+-----------------------------------------------------------
+Grey text
+
+    <div class="deemphasis">
+    ...
+    </div>
+*/
+
+.deemphasis {
+    color: map-get($colors, grey4);
+}
+
+
+/* Collapse Margins
+-----------------------------------------------------------
+*/
+
+[class].collapse-margins,
+.collapse-margins {
+    margin-bottom: 0;
+}
+
+
+/* Visually Hidden
+-----------------------------------------------------------
+Drupal generated class.
+*/
+
+.visually-hidden {
+    display: none;
+}
+
+
+/* Condensed
+-----------------------------------------------------------
+Remove margin.
+*/
+
+.condensed {
+    margin-bottom: 0 !important;
+}

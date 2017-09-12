@@ -1,0 +1,86 @@
+/* Layout Columns
+===========================================================
+*/
+
+/* Rows and Columns
+-----------------------------------------------------------
+*/
+
+.row {
+    margin-bottom: $col-gutter;
+    @include clearfix;
+}
+
+[class*='column_'] {
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        float: left;
+    }
+}
+
+[class*=column_] + [class*=column_] {
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-left: $col-gutter;
+    }
+}
+
+.column_full { 
+    width: col-width(1,1);
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,1); 
+    }
+}
+
+.column_half { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,2); 
+    }
+}
+
+.column_third { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,3); 
+    }
+}
+
+.column_quarter { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,4); 
+    }
+}
+
+.column_two-quarters { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(2,4); 
+    }
+}
+
+.column_three-quarters { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(3,4); 
+    }
+}
+
+.column_fifth { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,5);
+    }
+}
+
+.column_sixth { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,6); 
+    }
+}
+
+.column_seventh { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,7); 
+    }
+}
+
+.column_eigth { 
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,8); 
+    }
+}
+

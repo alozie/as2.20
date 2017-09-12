@@ -1,0 +1,115 @@
+/* Lists
+===========================================================
+*/
+
+/* Ordered and Unordered Lists
+-----------------------------------------------------------
+Orered list:
+
+    <ol>
+        <li>Ordered List Item 1</li>
+        <li>Ordered List Item 2</li>
+        <li>Ordered List Item 3</li>
+    </ol>
+
+Unordered (bullet) list:
+
+    <ul>
+        <li>Unordered List Item 1</li>
+        <li>Unordered List Item 2</li>
+        <li>Unordered List Item 3</li>
+    </ul>
+*/
+
+.layout {
+    ul, ol {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        padding-left: 1.5em;
+        li {
+            margin-top: 0.75em;
+            margin-bottom: 0.75em;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6, p {
+        + ul,
+        + ol {
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+/* Unstyled List
+-----------------------------------------------------------
+
+    <ul class="list-unstyled">
+    ...
+    </ul>
+*/
+
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+
+/* Compact List
+-----------------------------------------------------------
+
+    <ul class="list-compact">
+    ...
+    </ul>
+*/
+
+.list-compact {
+    padding-left: 0;
+    list-style: none;
+}
+
+
+/* Inline List
+-----------------------------------------------------------
+
+    <ul class="list-inline">
+    ...
+    </ul>
+*/
+
+.list-inline {
+    padding-left: 0;
+    list-style: none;
+    li {
+        display: inline;
+    }
+}
+
+/* List Grid
+-----------------------------------------------------------
+
+
+    <ul class="list-grid">
+    ...
+    </ul>
+*/
+
+.list-grid {
+    padding-left: 0;
+    list-style: none;
+    li {
+        display: block;
+        margin-bottom: $col-gutter;
+    }
+    a:hover {
+        background: transparent;
+    }
+    a::after {
+        border-bottom: 0;
+    }
+}
+
+

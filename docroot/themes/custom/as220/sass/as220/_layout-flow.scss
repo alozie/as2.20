@@ -1,0 +1,48 @@
+/* Layout Flow
+===========================================================
+Flow layouts are intended for use with the Drupal 
+Paragraphs module
+
+    <div class="layout">
+        <div class="flow">
+            ...
+            <div class="flow_left">...</div>
+            ...
+        </div>
+    </div>
+*/
+
+.flow {
+    @include clearfix;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-left: col-width(1,4) + $col-gutter;
+        width: col-width(2,4);
+    }
+}
+
+.flow_full {
+    clear: both;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-left: ((inverse-col-width(1,4,1,2) + inverse-gutter-width(1,2)) * -1);
+        margin-right: ((inverse-col-width(1,4,1,2) + inverse-gutter-width(1,2)) * -1);
+    }
+}
+
+.flow_middle {}
+
+.flow_left {
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        float: left;
+        margin-left: ((inverse-col-width(1,4,1,2) + inverse-gutter-width(1,2)) * -1);
+        width: (inverse-col-width(1,4,1,2));
+    }
+}
+
+.flow_right {
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        float: right;
+        margin-right: ((inverse-col-width(1,4,1,2) + inverse-gutter-width(1,2)) * -1);
+        width: (inverse-col-width(1,4,1,2));
+    }
+}
+

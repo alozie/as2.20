@@ -1,0 +1,38 @@
+/* Hero Unit
+===========================================================
+
+    <div class="wrapper">
+       <div class="hero">
+           <div class="hero_header">...</div>
+           <div class="hero_media">...</div>
+       </div>
+    </div>         
+*/
+
+// TODO: not happy with responsive behavior and image flow
+
+.hero {
+    padding: 0 map-get($col-padding, small);
+    @include clearfix;
+}
+
+.hero_header {
+    padding-top: 1em;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        float: left;
+        margin-right: $col-gutter;
+        width: col-width(1,4);
+    }
+}
+
+.hero_media {
+    margin-left: (map-get($col-padding, small) * -1);
+    margin-right: (map-get($col-padding, small) * -1);
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        float: left;
+        margin-left: 0;
+        margin-right: (map-get($col-padding,medium) * -1);
+        width: calc(#{col-width(3,4)} + #{map-get($col-padding,medium)});
+    }
+}
+

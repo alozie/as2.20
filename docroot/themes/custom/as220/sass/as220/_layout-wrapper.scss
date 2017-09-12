@@ -1,0 +1,44 @@
+/* Full-Bleed Wrapper
+===========================================================
+Use to create a full-bleed background behind a layout:
+
+    <div class="wrapper">
+        <div class="layout">
+            ...
+        </div>
+    </div>
+*/
+
+[class*='wrapper'] {
+    margin-bottom: map-get($col-padding, small);
+    padding: map-get($col-padding, small) 0;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-bottom: $col-gutter;
+        padding: map-get($col-padding, medium) 0;
+    }
+}
+
+[class*='wrapper'] > .layout:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper-inverse {
+    color: map-get($colors, white);
+    background-color: map-get($colors, black);
+    a {
+        color: map-get($colors, yellow);
+    }
+}
+
+.wrapper-yellow {
+    background-color: map-get($colors, yellow);
+}
+
+.wrapper-grey {
+    background-color: map-get($colors, grey6);
+}
+
+.wrapper-condensed {
+    padding: 0;
+}
+
