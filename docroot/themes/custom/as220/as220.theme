@@ -5,9 +5,6 @@
  * Functions to support theming in the Bartik theme.
  */
 
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
-
 /**
  * Implements template_preprocess_paragraph().
  */
@@ -15,4 +12,3 @@ function as220_preprocess_paragraph(&$variables) {
   $variables['flowpos'] = "flow_" . strtolower($variables['elements']['field_flow_position'][0]['#markup']);
   unset($variables['elements']['field_flow_position']);
 }
-
