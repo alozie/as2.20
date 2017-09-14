@@ -1,9 +1,9 @@
 project:
   machine_name: as220
   prefix: AS220
-  human_name: 'AS220.org'
+  human_name: AS220.org
   profile:
-    name: lightning
+    name: standard
   local:
     protocol: http
     hostname: 'local.${project.machine_name}.org'
@@ -13,7 +13,7 @@ git:
 drush:
   aliases:
     remote: '${project.machine_name}.test'
-    local: self
+    local: '${project.machine_name}.local'
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
