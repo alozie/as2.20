@@ -1,0 +1,67 @@
+/* Tabs 
+===========================================================
+Drupal admin tabs
+
+    <nav class="admin_tabs">
+        <ul class="admin_tabs"> 
+            <li>
+                <a href="..." class="is-active">
+                    View<span class="visually-hidden">(active tab)</span>
+                </a>
+            </li>
+            <li><a href="...">Edit</a></li>
+        </ul>
+    </div>
+*/
+
+.admin {} // Placeholder for admin style scope
+
+.admin_tabs {
+    margin-bottom: 0.5em;
+    padding: 0;
+    ul {
+        position: relative;
+        margin-bottom: -1px;
+        padding: 0;
+        list-style: none;
+        line-height: 1rem;
+        &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px solid map-get($colors, berry);
+            z-index: -1;
+        }
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            line-height: 3em;
+            a, 
+            a:active, 
+            a:visited {
+                display: block;
+                padding: 0 1em;
+                border: 0;
+                border-top: 1px solid map-get($colors, berry);
+                border-right: 1px solid map-get($colors, berry);
+                border-left: 1px solid map-get($colors, berry);
+                color: map-get($colors, white);
+                background: map-get($colors, berry);
+            }
+            a:hover {
+                border-bottom: 0;
+                color: map-get($colors, black);
+            }
+            a.is-active {
+                color: map-get($colors, berry);
+                background: map-get($colors, white);
+                z-index: +1;
+            }
+        }
+    }
+} 
+

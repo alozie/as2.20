@@ -1,0 +1,25 @@
+/* Action 
+===========================================================
+Action blocks are for donation requests, ticket sales, and 
+other forms.
+
+Base-64 encoded repeating background SVG:
+
+    <svg xmlns='http://www.w3.org/2000/svg' width='24' height='56.54'>
+        <polygon fill="#000000" points="0,28.3 0,0 12,0 "/>
+        <polygon fill="#000000" points="0,56.5 12,56.5 24,28.3 24,0 "/>
+    </svg>
+*/
+
+.action-block {
+    background-color: map-get($colors, yellow);
+}
+
+.action-block::before {
+    display: block;
+    content: '';
+    height: 1.5em;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyNCcgaGVpZ2h0PSc1Ni41NCc+DQo8cG9seWdvbiBmaWxsPSIjMDAwMDAwIiBwb2ludHM9IjAsMjguMyAwLDAgMTIsMCAiLz4NCjxwb2x5Z29uIGZpbGw9IiMwMDAwMDAiIHBvaW50cz0iMCw1Ni41IDEyLDU2LjUgMjQsMjguMyAyNCwwICIvPg0KPC9zdmc+DQo=");
+}
+
+

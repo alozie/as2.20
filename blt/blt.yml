@@ -1,0 +1,52 @@
+project:
+  machine_name: as220
+  prefix: AS220
+  human_name: AS220.org
+  profile:
+    name: standard
+  local:
+    protocol: http
+    hostname: 'local.${project.machine_name}.org'
+git:
+  default_branch: master
+  remotes:
+    - 'as220ri@svn-6689.devcloud.hosting.acquia.com:as220ri.git'
+    - 'git@github.com:as220dotorg/as2.20.git'
+cm:
+  strategy: config-split
+  core:
+    path: ../config
+    keys: sync
+    dirs: { sync: { path: '${cm.core.path}/default' } }
+  allow-overrides: true
+deploy:
+  tag_source: true
+post-deploy-build:
+  dir: '${deploy.dir}/drush'
+  command: 'find ''Commands'' -type d -name ''.git'' -exec rm -fr {} +'
+drush:
+  aliases:
+    remote: '${project.machine_name}.test'
+    local: self
+    ci: self
+  default_alias: '${drush.aliases.local}'
+modules:
+  local:
+    enable: [dblog, devel, seckit, views_ui]
+    uninstall: [acquia_connector, shield]
+  ci:
+    enable: {  }
+    uninstall: [acquia_connector, shield]
+  dev:
+    enable: [acquia_connector, shield]
+    uninstall: {  }
+  test:
+    enable: [acquia_connector, shield]
+    uninstall: [devel, views_ui]
+  prod:
+    enable: [acquia_connector, shield]
+    uninstall: [devel, views_ui]
+validate:
+  acsf: true
+cloud:
+  appId: ac4d81d8-e609-4b8a-85a8-faaba01a860d

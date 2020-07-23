@@ -1,0 +1,424 @@
+/* Nav
+===========================================================
+*/
+
+// Add somewhere else, required
+html, body {
+    height: 100%;
+}
+
+.precontent {
+    margin-top: 3.75em; // Clearance for fixed navbar
+}
+
+
+/* Navbar
+-----------------------------------------------------------
+*/
+
+
+//toolbar-tray-open
+//
+//toolbar-fixed
+//
+//toolbar-horizontal
+//toolbar-vertical
+//
+//top line 39px
+//+ 41
+
+.toolbar-tray-open.toolbar-horizontal .navbar {
+    top: 80px;
+    .wrap {top: 140px;}
+}
+
+.toolbar-tray-open.toolbar-vertical .navbar {
+    top: 39px;
+    .wrap {top: 99px;}
+}
+
+
+//.toolbar-horizontal .navbar {
+//    top: 5em;
+//}
+
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    background: map-get($colors,black);
+    @include noselect;
+    height: 3.75em;
+    z-index: +1;
+    @media screen and (min-width: $min-nav-width) {
+        position: fixed;
+        background: map-get($colors,yellow);
+    }
+}
+
+
+/* Logo
+-----------------------------------------------------------
+*/
+
+.logo {
+    display: block;
+    float: left;
+    width: 13.5em;
+    height: 3.75em;
+    text-indent: -999em;
+    overflow: hidden;
+    background-color: map-get($colors,yellow);
+    background-image: url('/themes/as220/img/as220logo.png');
+    background-image: url('/themes/as220/img/as220logo.svg');
+    background-size: 12em;
+    background-repeat: no-repeat;
+    background-position: 0.5em 1.125em;
+    @media screen and (max-width: $min-nav-width - 1px) {
+        width: 100%;
+    }
+    @media screen and (min-width: $min-nav-width) {
+    }
+}
+
+.logo a { // add to template
+    display: block;
+    padding: 2em;
+}
+
+
+/* Menu Toggle
+-----------------------------------------------------------
+*/
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    padding: 1.375em 1.375em 1.375em 3.375em;
+    line-height: 3.875em;
+    top: 0;
+    right: 0;
+    font-family: $font-brand;
+    line-height: 1em;
+    text-transform: uppercase;
+    z-index: +1;
+    cursor: pointer;
+
+    @media screen and (min-width: $min-nav-width) {
+        display: none;
+    }
+}
+
+
+.menu-toggle::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 1.125em;
+    left: 1.25em;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url('/themes/as220/img/menu.png');
+    background-image: url('/themes/as220/img/menu.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    @media screen and (min-width: $min-nav-width) {
+        display: none;
+    }
+}
+
+.menu-panel {
+    transition: 300ms all ease;
+
+    @media screen and (max-width: $min-nav-width - 1px) {
+        position: fixed;
+        top: 3.75em;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: map-get($colors,black);
+        transform: translateX(100%);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch; /* lets it scroll lazy */
+    }
+}
+
+.active-menu .menu-toggle {
+    padding: 1.375em 0 1.375em 1.375em;
+    width: 3.75em;
+    overflow: hidden;
+    text-indent: 3em;
+}
+
+.active-menu .menu-toggle::before {
+    @media screen and (max-width: $min-nav-width - 1px) {
+        background-image: url('/themes/as220/img/menu--close.png');
+        background-image: url('/themes/as220/img/menu--close.svg');
+    }
+}
+
+.active-menu .page-wrap {
+    overflow: hidden;
+    height: 100%;
+}
+
+.active-menu .menu-panel {
+    transform: translateX(0);
+}
+
+
+/* Search
+-----------------------------------------------------------
+*/
+
+.search-block-form {
+    position: relative;
+    @media screen and (max-width: $min-nav-width - 1px) {
+        clear: both;
+        padding: 0.25em 0.5em;
+    }
+    @media screen and (min-width: $min-nav-width) {
+        float: right;
+        margin: 0;
+        padding: 0 0.5em;
+        max-width: 10em;
+    }
+}
+
+.search-block-form::after {
+    display: block;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.625rem;
+    width: 2.625rem;
+    height: 2.875rem;
+    color: map-get($colors,white);
+    content: '';
+    z-index: 999;
+    background-image: url("/themes/as220/img/search--yellow.png");
+    background-image: url("/themes/as220/img/search--yellow.svg");
+    background-size: 1.5em 1.5em;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: +1;
+    @media screen and (min-width: $min-nav-width) {
+        color: map-get($colors,black);
+        background-image: url("/themes/as220/img/search--black.png");
+        background-image: url("/themes/as220/img/search--black.svg");
+    }
+}
+
+.search-block-form .form-search {
+    display: block;
+    margin: 0.325em 0;
+    padding: 0.875em 2.375em 0.875em 0.5em;
+    border: 1px solid #bfa230;
+    line-height: 1em;
+    max-width: 100%;
+    color: map-get($colors,white);
+    background: transparent;
+    @media screen and (min-width: $min-nav-width) {
+        color: map-get($colors,black);
+    }
+}
+
+.search-block-form .form-search::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    text-transform: uppercase; color: #bfa230;
+}
+.search-block-form .form-search::-moz-placeholder { /* Firefox 19+ */
+    text-transform: uppercase; color: #bfa230;
+}
+.search-block-form .form-search::-ms-input-placeholder { /* IE 10+ */
+    text-transform: uppercase; color: #bfa230;
+}
+.search-block-form .form-search::-moz-placeholder { /* Firefox 18- */
+    text-transform: uppercase; color: #bfa230;
+}
+.search-block-form .form-search::placeholder { /* Spec */
+    text-transform: uppercase; color: #bfa230;
+}
+
+.search-block-form .form-submit {
+    position: absolute;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    top: 0.325em;
+    right: 0.5em;
+    width: 2.875em;
+    height: 2.875em;
+    text-indent: 9em;
+    z-index: +2;
+    background-color: rgba(255,255,0,0.8);
+    background-color: transparent;
+}
+
+
+/* Menu
+-----------------------------------------------------------
+*/
+
+// General formats
+
+.menu {
+    margin: 0;
+    display: block;
+    position: static;
+    @media screen and (min-width: $min-nav-width) {
+        text-align: center;
+    }
+}
+
+.menu a {
+    text-decoration: none;
+}
+
+
+// Mobile
+
+@media screen and (max-width: $min-nav-width - 1px) {
+
+    .menu ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .menu li {
+        position: relative;
+        padding-left: 2.75rem;
+    }
+
+    .menu > ul > li.has-children::before { // top level add arrows
+        display: block;
+        content: '';
+        color: map-get($colors,yellow);
+        position: absolute;
+        left: 2.75em;
+        top: 1.5em;
+        width: 1em;
+        height: 1em;
+        font-size: 5px;
+        @include triangle(right);
+        cursor:pointer;
+    }
+    .menu .has-children.active-menu-parent::before {
+        @include triangle(bottom);
+    }
+
+    .menu a {
+        color: map-get($colors,white);
+    }
+    .menu > ul > li > a {
+        text-transform: uppercase;
+        color: map-get($colors,yellow);
+    }
+    .wrap {
+        display: none;
+    }
+    .has-children.active-menu-parent .wrap {
+        display: block;
+    }
+}
+
+// Desktop
+
+@media screen and (min-width: $min-nav-width) {
+    .menu ul,
+    .menu ul li {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .menu ul.menu__parent {
+        display: inline-block;
+    }
+    .menu ul.menu__parent > li {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1em;
+        display: inline-block;
+    }
+    .menu .menu__parent:hover > li > a {
+        color: map-get($colors,yellow-dark);
+    }
+    .menu > .menu__parent > li:hover > a {
+        color: map-get($colors,black);
+    }
+    .menu .menu__parent > li > a {
+        position: relative;
+        display: block;
+        padding: 1.375em 0.5em;
+        text-decoration: none;
+        color: map-get($colors,black);
+        text-transform: uppercase;
+    }
+    .menu .menu__parent > .has-children > a::after {
+        display: block;
+        position: absolute;
+        content: '';
+        margin-left: -5px;
+        left: 50%;
+        bottom: 6px;
+        font-size: 5px;
+        color: map-get($colors,yellowDark);
+        @include triangle(bottom);
+    }
+    .menu > .menu__parent > .has-children:hover > a::after { // Refactor to hover
+        margin-left: -5px;
+        bottom: 0;
+        font-size: 8px;
+        color: map-get($colors,black);
+        @include triangle(top);
+    }
+    .menu .wrap {
+        display: none;
+        padding: 1em 0;
+        position: fixed;
+        top: 3.75em;
+        left: 0;
+        right: 0;
+        background: map-get($colors,black);
+    }
+    .menu .wrap > .menu__child > li > a {
+        text-transform: uppercase;
+        color: map-get($colors,yellow);
+    }
+    .menu .wrap a {
+        display: inline-block;
+        -webkit-column-break-inside: avoid;
+                  page-break-inside: avoid;
+                       break-inside: avoid;
+        text-decoration: none;
+        line-height: 2em;
+        color: map-get($colors,white);
+    }
+    .menu .wrap > .menu__child {
+        margin: 0 auto;
+        max-width: 800px;
+        -webkit-column-count: 4;
+           -moz-column-count: 4;
+                column-count: 4;
+        text-align: left;
+
+    }
+    .menu .wrap > .menu__child a {
+        position: relative;
+    }
+    .menu .wrap > .menu__child a:hover::after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px dotted map-get($colors,yellow);
+    }
+    .menu > .menu__parent > .has-children:hover .wrap{
+        display: block;
+    }
+}

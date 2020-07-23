@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_alt_text
+    - paragraphs.paragraphs_type.para_video
+id: paragraph.para_video.field_para_alt_text
+field_name: field_para_alt_text
+entity_type: paragraph
+bundle: para_video
+label: 'Alt Text'
+description: 'Enter any alternative text for the video. This is important for accessibility.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

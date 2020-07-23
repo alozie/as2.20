@@ -1,0 +1,137 @@
+/* Layout Grids
+===========================================================
+Inline grids of equal widths with auto-wrapping. 
+
+Note: HTML comments are required to prevent spaces between 
+elements from being rendered.
+
+    <div class="grid-halves"><!--
+        --><div class="grid_item">...</div><!--
+        --><div class="grid_item">...</div><!--
+        --><div class="grid_item">...</div><!--
+    --></div>
+
+*/
+
+.grid_item,
+[class*='grid-'] li {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+[class*='grid-'] .grid_item,
+[class*='grid-'] li {
+    margin-right: $col-gutter;
+    margin-bottom: $col-gutter;
+}
+
+.grid-full .grid_item,
+.grid-full li { 
+    width: col-width(1,1); 
+    &:nth-child(1n) { margin-right: 0; }
+}
+
+.grid-halves .grid_item,
+.grid-halves li { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,1); 
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,2); 
+        &:nth-child(2n) { margin-right: 0; }
+    }
+}
+
+.grid-thirds .grid_item,
+.grid-thirds li { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,1); 
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,3); 
+        &:nth-child(3n) { margin-right: 0; }
+    }
+}
+
+.grid-quarters .grid_item,
+.grid-quarters li { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,2); 
+        &:nth-child(2n) { margin-right: 0; }
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,4); 
+        &:nth-child(4n) { margin-right: 0; }
+    }
+}
+
+.grid-fifths .grid_item,
+.grid-fifths li { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,2); 
+        &:nth-child(2n) { margin-right: 0; }
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,5); 
+        &:nth-child(5n) { margin-right: 0; }
+    }
+}
+
+.grid-sixths .grid_item { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,3); 
+        &:nth-child(3n) { margin-right: 0; }
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,6); 
+        &:nth-child(6n) { margin-right: 0; }
+    }
+}
+
+.grid-sevenths .grid_item { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,4); 
+        &:nth-child(4n) { margin-right: 0; }
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,7); 
+        &:nth-child(7n) { margin-right: 0; }
+    }
+}
+
+.grid-eigths .grid_item,
+.grid-eigths li { 
+    @media (max-width: (map-get($layout-breakpoint, medium) - 0.0625em)) {
+        width: col-width(1,4); 
+        &:nth-child(4n) { margin-right: 0; }
+    }
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        width: col-width(1,8); 
+        &:nth-child(8n) { margin-right: 0; }
+    }
+}
+
+/* List Grids
+===========================================================
+
+    <ul class="grid-halves"><!--
+        --><li>...</li><!--
+        --><li>...</li><!--
+        --><li>...</li><!--
+    --></ul>
+
+*/
+
+ul[class*=grid],
+ol[class*=grid] {
+    padding-left: 0;
+    list-style: none;
+}
+
+ul[class*=grid] li,
+ol[class*=grid] li {
+    display: inline-block;
+    vertical-align: top;
+}
+

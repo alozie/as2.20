@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_gallery_item
+    - paragraphs.paragraphs_type.para_gallery
+    - paragraphs.paragraphs_type.para_image
+id: paragraph.para_gallery.field_para_gallery_item
+field_name: field_para_gallery_item
+entity_type: paragraph
+bundle: para_gallery
+label: 'Gallery Item'
+description: 'Select the items for the gallery'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      para_image: para_image
+    target_bundles_drag_drop:
+      para_audio:
+        weight: 7
+        enabled: false
+      para_blockquote:
+        weight: 8
+        enabled: false
+      para_gallery:
+        weight: 9
+        enabled: false
+      para_image:
+        enabled: true
+        weight: 10
+      para_text:
+        weight: 11
+        enabled: false
+      para_video:
+        weight: 12
+        enabled: false
+field_type: entity_reference

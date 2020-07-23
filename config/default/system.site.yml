@@ -1,0 +1,14 @@
+uuid: c8d38acf-a5c9-4fe5-801a-0053b860708e
+name: AS220.org
+mail: no-reply@acquia.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

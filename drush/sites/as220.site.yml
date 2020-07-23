@@ -1,0 +1,7 @@
+local:
+    host: local.as220.org
+    options: {  }
+    root: /var/www/as220/docroot
+    uri: 'http://local.as220.org'
+    user: vagrant
+    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }

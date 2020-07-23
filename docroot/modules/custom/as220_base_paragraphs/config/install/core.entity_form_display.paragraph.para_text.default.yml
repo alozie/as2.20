@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.para_text.field_para_layout
+    - field.field.paragraph.para_text.field_para_text
+    - paragraphs.paragraphs_type.para_text
+  module:
+    - text
+id: paragraph.para_text.default
+targetEntityType: paragraph
+bundle: para_text
+mode: default
+content:
+  field_para_layout:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+  field_para_text:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  uid: true

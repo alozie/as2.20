@@ -1,0 +1,48 @@
+# Application 'as220ri', environment 'dev'.
+dev:
+  root: /var/www/html/as220ri.dev/docroot
+  ac-site: as220ri
+  ac-env: dev
+  ac-realm: devcloud
+  uri: as220riwmwwcwcv2m.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@as220ri.dev'
+    root: /mnt/gfs/as220ri.dev/livedev/docroot
+  host: as220riwmwwcwcv2m.ssh.devcloud.acquia-sites.com
+  user: as220ri.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'as220ri', environment 'prod'.
+prod:
+  root: /var/www/html/as220ri.prod/docroot
+  ac-site: as220ri
+  ac-env: prod
+  ac-realm: devcloud
+  uri: as220ripf9dpfad4u.devcloud.acquia-sites.com
+  prod.livedev:
+    parent: '@as220ri.prod'
+    root: /mnt/gfs/as220ri.prod/livedev/docroot
+  host: as220ripf9dpfad4u.ssh.devcloud.acquia-sites.com
+  user: as220ri.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'as220ri', environment 'test'.
+test:
+  root: /var/www/html/as220ri.test/docroot
+  ac-site: as220ri
+  ac-env: test
+  ac-realm: devcloud
+  uri: as220rieky2axpcsw.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@as220ri.test'
+    root: /mnt/gfs/as220ri.test/livedev/docroot
+  host: as220rieky2axpcsw.ssh.devcloud.acquia-sites.com
+  user: as220ri.test
+  paths:
+    drush-script: drush9
+
+

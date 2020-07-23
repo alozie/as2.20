@@ -1,0 +1,54 @@
+/* Rules
+===============================================================================
+*/
+
+/* Horizontal Rule
+-------------------------------------------------------------------------------
+*/
+
+.layout {
+    hr {
+        border: 0;
+        border-bottom: 1px solid map-get($colors, grey5);
+        height: 0;
+    }
+}
+
+
+/* Heavy Rule
+-------------------------------------------------------------------------------
+*/
+
+.layout {
+    hr.heavy {
+        border-bottom: 6px solid map-get($colors, grey5);
+    }
+}
+
+/* Base
+===========================================================
+Apply a natural box layout model to all elements, but
+allowing components to change.
+*/
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	background-color: #ffffff;
+}
+
+.lt-ie9 { // Hack for clearfixes
+	* {
+		filter: none !important;
+	}
+}
+
+[aria-hidden=true] {
+	display: none !important;
+}

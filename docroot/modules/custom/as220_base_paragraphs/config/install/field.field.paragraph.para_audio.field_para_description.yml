@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_description
+    - paragraphs.paragraphs_type.para_audio
+  module:
+    - text
+id: paragraph.para_audio.field_para_description
+field_name: field_para_description
+entity_type: paragraph
+bundle: para_audio
+label: Description
+description: 'Enter any description for the audio track here'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

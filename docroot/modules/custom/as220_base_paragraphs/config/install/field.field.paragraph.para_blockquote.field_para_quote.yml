@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_quote
+    - paragraphs.paragraphs_type.para_blockquote
+  module:
+    - text
+id: paragraph.para_blockquote.field_para_quote
+field_name: field_para_quote
+entity_type: paragraph
+bundle: para_blockquote
+label: Quote
+description: 'Enter the text you would like to display as a blockquote'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

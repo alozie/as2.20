@@ -1,0 +1,22 @@
+/* Video
+===========================================================    
+From: https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+    
+    <div class="video">
+        <iframe src="..."></iframe>
+    </div>
+*/
+
+.video {
+	position: relative;
+	padding-bottom: 56.25%; // 16:9
+	height: 0;
+}
+.video > iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+

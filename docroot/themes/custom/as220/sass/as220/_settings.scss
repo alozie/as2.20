@@ -1,0 +1,83 @@
+/* Global Variables
+===========================================================
+*/
+
+/* Color Settings
+-----------------------------------------------------------
+*/
+
+$colors: (
+    yellow:       #ffd840,
+    yellow-dark:  #bfa230,
+    berry:        #b71c8d,
+    white:        #ffffff,
+    black:        #000000,
+    grey1:        #221f1f, // darkest
+    grey2:        #414042,
+    grey3:        #58595b,
+    grey4:        #a7a9ac,
+    grey5:        #d1d3d4,
+    grey6:        #e2e2e2 // lightest
+);
+
+/* Font Settings
+-----------------------------------------------------------
+TODO: Load fonts via Google font loader script
+*/
+
+$font-brand:   'Montserrat', 'Helvetica Neue', 'Arial', sans-serif !default;
+$font-sans:    'Helvetica Neue', 'Arial', sans-serif !default;
+$font-serif:   'Georgia', 'Times New Roman', serif !default;
+
+$base-font-size:      16px !default;
+$base-line-height:    1.5 !default;
+
+$focus-shadow: 0 0 3px map-get($colors,yellow), 0 0 7px map-get($colors,yellow);
+
+$max-width:      100em !default; // Constriain with of content to 1600px
+$min-grid-width: 580px !default; // Minimum width to display a grid, otherwise stack 
+$min-col-width:  640px !default; // Minimum width to display layout columns, otherwise stack 
+$min-type-width: 640px !default; // Minimum width to display large type 
+$min-nav-width:  880px !default; // Minimum width to display horizontal nav, otherwise use menu 
+
+
+@mixin noselect() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noselect {
+    @include noselect;
+}
+
+
+@mixin triangle ($direction: right) {
+    $perpendicular-borders: 1em solid transparent;
+    $opposite-border: 0;
+    $direction-border: 1.72em solid currentColor;
+    @if $direction == top {
+        border-top: $opposite-border;
+        border-right: $perpendicular-borders;
+        border-bottom: $direction-border;
+        border-left: $perpendicular-borders;
+    } @else if $direction == right {
+        border-top: $perpendicular-borders;
+        border-right: $opposite-border;
+        border-bottom: $perpendicular-borders;
+        border-left: $direction-border;
+    } @else if $direction == bottom {
+        border-top: $direction-border;
+        border-right: $perpendicular-borders;
+        border-bottom: $opposite-border;
+        border-left: $perpendicular-borders;
+    } @else if $direction == left {
+        border-top: $perpendicular-borders;
+        border-right: $direction-border;
+        border-bottom: $perpendicular-borders;
+        border-left: $opposite-border;
+    }    
+}

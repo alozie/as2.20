@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_para_blockquote
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_para_blockquote
+field_name: field_para_blockquote
+entity_type: node
+bundle: page
+label: 'Flow Blockquote'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      body_test_foo: body_test_foo
+      some_dumb_type_bla: some_dumb_type_bla
+    target_bundles_drag_drop:
+      body_test_foo:
+        weight: 3
+        enabled: false
+      some_dumb_type_bla:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

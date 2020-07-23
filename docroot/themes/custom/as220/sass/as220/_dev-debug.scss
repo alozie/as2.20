@@ -1,0 +1,28 @@
+/* Dev Debug 
+===========================================================
+Use these classes to debug layouts.
+*/
+
+.debug .wrap,
+.debug .layout {
+    background: rgba(255,255,0,0.3);
+}
+
+.debug .hero,
+.debug .hero > div,
+.debug .grid_item, 
+.debug [class*=column_],
+.debug .flow, 
+.debug .flow > div {
+    background: rgba(255,0,0,0.3);
+}
+
+.debug .msg {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 0.5em;
+    background: blue;
+    color: white;
+}
+

@@ -1,0 +1,98 @@
+/* Layout Settings
+===============================================================================
+*/
+
+/* Layout Variables
+-------------------------------------------------------------------------------
+*/
+
+// Max width — center if larger
+$layout-max-width: 75em;
+
+// Mobile-first viewport breakpoints
+$layout-breakpoint: (
+    small: 30em,
+    medium: 37.4em,
+    large: 75em
+);
+
+// Column settings
+$col-gutter: 2% !global;
+$col-padding: (
+    small: 0.625em,
+    medium: 2.75em
+);
+
+/* Layout Functions
+-------------------------------------------------------------------------------
+*/
+
+@function col-width($_col-span, $_col-division) {
+    $_gutter-amt: ($_col-division - 1) * $col-gutter;
+    $_col-width: (100% - $_gutter-amt) / $_col-division;
+    $_span-width: $_col-width * $_col-span + ($col-gutter * ($_col-span - 1));
+    @return $_span-width;
+}
+
+@function inverse-gutter-width($_parent-col-span, $_parent-col-division) {
+    $_parent-width: col-width($_parent-col-span, $_parent-col-division);
+    $_inverse-total-width: (100% / col-width($_parent-col-span, $_parent-col-division)) * 100;
+    $_gutter-width: ($col-gutter / 100) * $_inverse-total-width;
+    @return $_gutter-width;
+}
+
+
+@function inverse-col-width($_child-col-span, $_child-col-division, $_parent-col-span, $_parent-col-division) {
+    $_inverse-total-width: (100% / col-width($_parent-col-span, $_parent-col-division)) * 100;
+    $_inverse-child-width: (col-width($_child-col-span, $_child-col-division) / 100) * $_inverse-total-width;
+    @return $_inverse-child-width;
+}
+
+
+/* Layout Mixins
+-------------------------------------------------------------------------------
+*/
+
+@mixin clearfix() {
+    &:after {
+        content: ".";  
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+
+/* Layout Wrapper
+-------------------------------------------------------------------------------
+*/
+
+.layout {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: map-get($col-padding, small);
+    box-sizing: border-box;
+    padding: 0 map-get($col-padding, small);
+    max-width: $layout-max-width;
+    @media (min-width: map-get($layout-breakpoint, medium)) {
+        margin-bottom: $col-gutter;
+        padding: 0 map-get($col-padding, medium);
+    }
+}
+
+
+/* padded Layout
+-------------------------------------------------------------------------------
+*/
+
+.layout .padded, 
+.layout.padded [class*='column'],
+.layout.padded .grid_item,
+.layout.padded [class*='glow']{
+    box-sizing: border-box;
+    padding: 0.625em;
+}
+
+
+

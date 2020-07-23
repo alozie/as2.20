@@ -1,0 +1,16 @@
+name: 'AS220 Base Paragraphs'
+type: module
+core: 8.x
+dependencies:
+  - drupal:entity_reference_revisions
+  - drupal:field
+  - drupal:file
+  - drupal:image
+  - drupal:node
+  - drupal:paragraphs
+  - drupal:path
+  - drupal:soundcloudfield
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:user
+  - drupal:video_embed_field

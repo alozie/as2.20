@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_para_attribution
+    - paragraphs.paragraphs_type.para_blockquote
+id: paragraph.para_blockquote.field_para_attribution
+field_name: field_para_attribution
+entity_type: paragraph
+bundle: para_blockquote
+label: Attribution
+description: 'Enter the attribution (if any) for this blockquote'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

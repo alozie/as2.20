@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the Bartik theme.
+ */
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function as220_preprocess_paragraph(&$variables) {
+  $variables['flowpos'] = "flow_" . strtolower($variables['elements']['field_flow_position'][0]['#markup']);
+  unset($variables['elements']['field_flow_position']);
+}

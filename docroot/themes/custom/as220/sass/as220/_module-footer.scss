@@ -1,0 +1,89 @@
+/* Footer
+===========================================================
+*/
+
+.page-footer {
+    h3 {
+        margin-top: -0.175em;
+        margin-bottom: 1.125em;
+        a {
+            &:link,
+            &:active,
+            &:visited {
+                color: map-get($colors, black);
+                border-bottom: 5px solid currentColor;
+            }
+            &:hover {
+                border-bottom: 5px solid currentColor;
+                background: map-get($colors, yellow);
+            }
+        }
+    }
+}
+
+/* Sticky Footer
+===========================================================
+Uses flexbox to push footer to the bottom of the viewport.
+
+From: http://philipwalton.github.io/solved-by-flexbox/demos/sticky-footer/
+
+    <body>
+        <div class="page">...</div>
+    </body>
+*/
+
+html, 
+body {
+    height: 100%;
+}
+
+html[data-useragent^='MSIE'] body {
+    height: 100%;
+}  
+
+.page-wrap {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin: 0;
+    height: 100%; // ie 10 & 11 ignore min-height
+    min-height: 100%;
+}
+    
+.page {
+    -webkit-box-flex: 1;
+        -webkit-flex: 1 0 auto;
+            -ms-flex: 1 0 auto;
+                flex: 1 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    &::after {
+        content: '\00a0'; // non-breaking space
+        display: block;
+        margin-top: 1em;
+        height: 0;
+        visibility: hidden;
+    } 
+}
+    
+.page-footer {
+    -webkit-box-flex: 0;
+        -webkit-flex: none;
+            -ms-flex: none;
+                flex: none
+}
+    
+.page, 
+.page-footer {
+    display: block; // fix Android 4 flexbox: won't work unless block
+}   
+
+.page-footer > hr {
+    margin-bottom: 2em;
+}

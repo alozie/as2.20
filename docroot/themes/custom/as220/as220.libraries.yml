@@ -1,0 +1,11 @@
+global-css:
+  css:
+    theme:
+      css/as220.css: {}
+
+global-js:
+  js:
+    js/as220.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
