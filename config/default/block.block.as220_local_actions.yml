@@ -1,0 +1,20 @@
+uuid: e68a3abd-a9b2-4e40-a0a8-098f4903a5d2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - as220
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: as220_local_actions
+theme: as220
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }
