@@ -1,0 +1,8 @@
+uuid: 4943d10a-c985-46b2-bf56-5ef90d9888be
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Types'
+vid: event_types
+description: 'e.g. performance, gallery opening, artist talk,...'
+weight: 0

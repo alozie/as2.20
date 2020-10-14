@@ -1,0 +1,8 @@
+uuid: d46ccbfe-94a3-4f0e-a9d9-920a9aef3df5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Location Types'
+vid: location_types
+description: 'e.g. gallery, stage, studio, classroom'
+weight: 0
