@@ -1,6 +1,7 @@
 module:
   automated_cron: 0
   big_pipe: 0
+  blazy: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -24,6 +25,8 @@ module:
   dblog: 0
   dynamic_page_cache: 0
   editor: 0
+  entity: 0
+  entity_browser: 0
   entity_reference_revisions: 0
   field: 0
   field_ui: 0
@@ -33,7 +36,22 @@ module:
   history: 0
   image: 0
   imce: 0
+  inline_entity_form: 0
+  lightning_core: 0
+  lightning_media: 0
+  lightning_media_audio: 0
+  lightning_media_document: 0
+  lightning_media_image: 0
+  lightning_media_instagram: 0
+  lightning_media_slideshow: 0
+  lightning_media_twitter: 0
+  lightning_media_video: 0
   link: 0
+  linkit: 0
+  media: 0
+  media_entity_instagram: 0
+  media_entity_twitter: 0
+  media_library: 0
   menu_link_content: 0
   menu_ui: 0
   node: 0
@@ -48,6 +66,8 @@ module:
   serialization: 0
   settings_tray: 0
   shortcut: 0
+  slick: 0
+  slick_entityreference: 0
   system: 0
   taxonomy: 0
   text: 0

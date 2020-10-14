@@ -1,0 +1,18 @@
+uuid: 62270b77-0975-4f69-ba72-a7331d900085
+langcode: en
+status: false
+dependencies: {  }
+id: media_audio_full
+label: 'Full content (Media, Audio)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: audio
+view_mode: full
+master_template: ''

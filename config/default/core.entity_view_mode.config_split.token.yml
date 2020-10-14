@@ -4,6 +4,10 @@ status: true
 dependencies:
   module:
     - config_split
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    internal: true
 id: config_split.token
 label: Token
 targetEntityType: config_split

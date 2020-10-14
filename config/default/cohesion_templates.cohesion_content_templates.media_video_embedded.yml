@@ -1,0 +1,18 @@
+uuid: 4d290723-d9cf-4872-b317-d94e2f3adc1a
+langcode: en
+status: false
+dependencies: {  }
+id: media_video_embedded
+label: 'Embedded (Media, Video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: video
+view_mode: embedded
+master_template: ''

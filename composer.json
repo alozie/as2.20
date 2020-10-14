@@ -32,7 +32,7 @@
         "drupal/features": "^3.11",
         "drupal/google_analytics": "^2.5",
         "drupal/link_attributes": "^1.10",
-        "drupal/linkit": "^5.0",
+        "drupal/linkit": "^4.3",
         "drupal/office_hours": "^1.2",
         "drupal/paragraphs": "^1.12",
         "drupal/qa_accounts": "^1.0.0-alpha1",

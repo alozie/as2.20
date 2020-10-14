@@ -1,0 +1,18 @@
+uuid: c0222a75-7d0c-4593-9990-ed1aafac1a26
+langcode: en
+status: false
+dependencies: {  }
+id: media_tweet_slideshow
+label: 'Slideshow (Media, Tweet)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: tweet
+view_mode: slideshow
+master_template: ''

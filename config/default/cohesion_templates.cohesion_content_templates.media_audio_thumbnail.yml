@@ -1,0 +1,18 @@
+uuid: 30a0cd8e-affb-4615-ab04-a7f641346938
+langcode: en
+status: false
+dependencies: {  }
+id: media_audio_thumbnail
+label: 'Thumbnail (Media, Audio)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: audio
+view_mode: thumbnail
+master_template: ''

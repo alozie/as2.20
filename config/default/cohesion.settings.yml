@@ -10,3 +10,20 @@ _core:
   default_config_hash: gpIMmHdWGMtTf2ZJoO-QHF9bk9ZVESnX-4LD-r3YtTw
 use_dx8: enable
 asset_is_imported: '1'
+log_dx8_error: disable
+animate_on_view_mobile: DISABLED
+add_animation_classes: DISABLED
+image_browser:
+  config:
+    type: entity_imagebrowser
+    dx8_entity_browser: image_browser
+  content:
+    type: medialib_imagebrowser
+    cohesion_media_lib_types:
+      - image
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0

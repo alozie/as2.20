@@ -1,0 +1,18 @@
+uuid: 16df669c-1e54-4fa5-8be5-e6a7e3469028
+langcode: en
+status: false
+dependencies: {  }
+id: media_remote_video_slick
+label: 'Slick carousel (Media, Remote video)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: media
+bundle: remote_video
+view_mode: slick
+master_template: ''

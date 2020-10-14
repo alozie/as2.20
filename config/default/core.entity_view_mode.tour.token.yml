@@ -3,7 +3,11 @@ langcode: en
 status: true
 dependencies:
   module:
+    - lightning_core
     - tour
+third_party_settings:
+  lightning_core:
+    internal: true
 id: tour.token
 label: Token
 targetEntityType: tour

@@ -1,0 +1,18 @@
+uuid: b4e17765-d9c8-49e7-95ab-b44800438b9a
+langcode: en
+status: false
+dependencies: {  }
+id: block_content_media_slideshow_fu
+label: 'Full (Block_content, Slideshow)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: block_content
+bundle: media_slideshow
+view_mode: full
+master_template: ''
