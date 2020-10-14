@@ -1,0 +1,25 @@
+uuid: 7f560540-9a33-4121-8b09-92d7251a7779
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - as220
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: as220_branding
+theme: as220
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

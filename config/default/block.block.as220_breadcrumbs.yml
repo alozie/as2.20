@@ -1,0 +1,22 @@
+uuid: 613762e4-ff9b-4e89-8b66-e55dded44340
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - as220
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: as220_breadcrumbs
+theme: as220
+region: preheader
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

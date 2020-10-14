@@ -1,0 +1,22 @@
+uuid: 77a45a90-35f4-4d98-8d16-1df68ebeafbe
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - as220
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: as220_content
+theme: as220
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }
