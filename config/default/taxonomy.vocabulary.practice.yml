@@ -1,0 +1,8 @@
+uuid: 89271289-7296-45e2-8590-e32c9deb0e98
+langcode: en
+status: true
+dependencies: {  }
+name: Practice
+vid: practice
+description: 'Roles of community members.'
+weight: 0

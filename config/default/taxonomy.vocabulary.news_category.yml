@@ -1,0 +1,8 @@
+uuid: e27b63f5-0776-4cdc-82eb-bfebf06ce9a8
+langcode: en
+status: true
+dependencies: {  }
+name: 'News Category'
+vid: news_category
+description: 'Type of News content e.g. blog post, press release, newsletter.'
+weight: 0
