@@ -1,0 +1,18 @@
+uuid: c8ba9812-e4f2-4276-88c4-2de91eed8298
+langcode: en
+status: false
+dependencies: {  }
+id: node_page_token
+label: 'Token (Node, Basic page)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: page
+view_mode: token
+master_template: ''

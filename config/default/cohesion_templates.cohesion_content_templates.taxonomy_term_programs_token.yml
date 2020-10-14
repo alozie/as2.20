@@ -1,0 +1,18 @@
+uuid: 67b6d37b-cb69-479f-83db-705227806ebf
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_programs_token
+label: 'Token (Taxonomy_term, Programs)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: programs
+view_mode: token
+master_template: ''

@@ -1,0 +1,18 @@
+uuid: 753f883e-1ddd-4a97-a3b5-908f2002efcb
+langcode: en
+status: false
+dependencies: {  }
+id: user_user_compact
+label: 'Compact (User, User)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: user
+bundle: user
+view_mode: compact
+master_template: ''

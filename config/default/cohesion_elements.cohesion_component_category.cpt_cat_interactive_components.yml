@@ -1,0 +1,16 @@
+uuid: d5402ffa-c089-4573-93f0-e9f5d57944d5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: I47o9AQ2aifarRRBg5ARzeIci3dQn_LA6Z-yu_QWpOM
+id: cpt_cat_interactive_components
+label: 'Interactive components'
+json_values: '{}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+locked: false
+modified: false
+selectable: true
+class: category-7
+weight: -7

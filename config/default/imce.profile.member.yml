@@ -1,0 +1,25 @@
+uuid: a59b9df3-fb93-43ac-94ef-21fc39a64ac7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: q8UTnSNpuX1XEqOBEnYY84ssgPvSNwHIrSyVE21G5Fk
+id: member
+label: 'Member profile'
+description: 'Configuration for site members'
+conf:
+  extensions: 'jpg png gif'
+  maxsize: 2
+  quota: 50
+  maxwidth: 1024
+  maxheight: 1024
+  replace: 0
+  thumbnail_style: ''
+  thumbnail_grid_style: false
+  folders:
+    -
+      path: 'users/user[user:uid]'
+      permissions:
+        browse_files: true
+        upload_files: true
+        delete_files: true

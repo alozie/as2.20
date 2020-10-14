@@ -1,0 +1,7 @@
+uuid: fcd0443d-2f3e-4346-9f40-c5afd1feab5a
+langcode: en
+status: true
+dependencies: {  }
+id: button
+label: Button
+element: button

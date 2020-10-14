@@ -1,0 +1,13 @@
+uuid: 581ec87d-59b2-4cce-9ccc-ae7729620c60
+langcode: en
+status: true
+dependencies: {  }
+id: gray
+label: Gray
+json_values: '{"name":"Gray","uid":"gray","value":{"value":{"hex":"#808080","rgba":"rgba(128, 128, 128, 1)"}},"wysiwyg":true,"class":".coh-color-gray","variable":"$coh-color-gray","inuse":false}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+locked: false
+modified: true
+selectable: true
+weight: 1

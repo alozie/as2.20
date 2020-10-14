@@ -1,0 +1,12 @@
+api_url: 'https://api.cohesiondx.com'
+api_key: alozie-nwosu-33128
+organization_key: internal-acquia-6240593d
+site_id: c8d38acf-a5c9-4fe5-801a-0053b860708e
+api_build_status: NO_CONTENT
+google_map_api_key: ''
+elements_permissions: '{}'
+sidebar_view_style: thumbnails
+_core:
+  default_config_hash: gpIMmHdWGMtTf2ZJoO-QHF9bk9ZVESnX-4LD-r3YtTw
+use_dx8: enable
+asset_is_imported: '1'

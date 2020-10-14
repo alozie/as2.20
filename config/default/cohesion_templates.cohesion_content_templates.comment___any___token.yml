@@ -1,0 +1,18 @@
+uuid: 94d512d8-fd7f-4d9f-a2dd-324a7bb36c29
+langcode: en
+status: false
+dependencies: {  }
+id: comment___any___token
+label: 'Token (Comment)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: comment
+bundle: __any__
+view_mode: token
+master_template: ''

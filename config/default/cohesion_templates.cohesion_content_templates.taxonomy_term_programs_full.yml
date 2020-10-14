@@ -1,0 +1,18 @@
+uuid: d65f6a63-e483-4655-8fe3-1d8fb5148323
+langcode: en
+status: false
+dependencies: {  }
+id: taxonomy_term_programs_full
+label: 'Taxonomy term page (Taxonomy_term, Programs)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: taxonomy_term
+bundle: programs
+view_mode: full
+master_template: ''

@@ -1,0 +1,18 @@
+uuid: 651c3816-33e2-4e46-9c66-10469552e85e
+langcode: en
+status: false
+dependencies: {  }
+id: node___any___search_index
+label: 'Search index (Node)'
+json_values: '{"canvas":[],"mapper":null,"model":[]}'
+json_mapper: '{}'
+last_entity_update: entityupdate_0028
+modified: false
+selectable: false
+custom: false
+twig_template: null
+default: false
+entity_type: node
+bundle: __any__
+view_mode: search_index
+master_template: ''
